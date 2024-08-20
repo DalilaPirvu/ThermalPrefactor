@@ -1,0 +1,15 @@
+#!/bin/bash
+#SBATCH --partition=debugq
+#SBATCH --nodes=1
+#SBATCH --tasks=1
+#SBATCH --cpus-per-task=80
+#SBATCH --time=1:00:00
+#SBATCH -J notebook
+#SBATCH --output=./out/slurm-%j.out
+###SBATCH --mail-user=dpirvu@perimeterinstitute.ca
+
+cd '/home/dpirvu/project/prefactor/'
+module load anaconda3
+module load python/3.7
+
+jupyter nbconvert --execute convergence_tests.ipynb --to 'html' --ExecutePreprocessor.timeout=-1

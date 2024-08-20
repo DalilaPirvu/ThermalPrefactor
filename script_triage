@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --partition=gpuq
+#SBATCH --nodes=1
+#SBATCH --time=24:00:00
+#SBATCH -J trig
+#SBATCH --output=./out/slurm-%j.out
+###SBATCH --mail-user=dpirvu@perimeterinstitute.ca
+
+cd '/home/dpirvu/project/paper_prefactor/'
+python3 ./bubble_codes/triage_apples.py >> ./out/output_triage.txt
+
+#python3 ./out/triage_apples0.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples1.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples2.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples3.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples4.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples5.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples6.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples7.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples8.py >> ./out/output_triage.txt &
+#python3 ./out/triage_apples9.py >> ./out/output_triage.txt &
+#wait
+
+print('Done')

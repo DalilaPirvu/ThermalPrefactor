@@ -1,0 +1,123 @@
+scp -r ./w ./out/v
+scp -r ./out/v ./out/vv
+scp -r ./out/v ./out/vvv
+scp -r ./out/v ./out/vvvv
+scp -r ./out/v ./out/vvvvv
+scp -r ./out/v ./out/vvvvvv
+scp -r ./out/v ./out/vvvvvvv
+scp -r ./out/v ./out/vvvvvvvv
+scp -r ./out/v ./out/vvvvvvvvv
+scp -r ./out/v ./out/vvvvvvvvvv
+scp -r ./out/v ./out/v1
+scp -r ./out/v ./out/vv1
+scp -r ./out/v ./out/vvv1
+scp -r ./out/v ./out/vvvv1
+scp -r ./out/v ./out/vvvvv1
+scp -r ./out/v ./out/vvvvvv1
+scp -r ./out/v ./out/vvvvvvv1
+scp -r ./out/v ./out/vvvvvvvv1
+scp -r ./out/v ./out/vvvvvvvvv1
+scp -r ./out/v ./out/vvvvvvvvvv1
+
+cd out
+
+cd v
+sbatch batch
+cd ..
+
+cd vv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 50, nSim = 100/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 100, nSim = 150/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 150, nSim = 200/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 200, nSim = 250/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 250, nSim = 300/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 300, nSim = 350/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 350, nSim = 400/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvvvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 400, nSim = 450/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvvvvv
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 450, nSim = 500/g' constants.f90
+sbatch batch
+cd ..
+
+cd v1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 500, nSim = 550/g' constants.f90
+sbatch batch
+cd ..
+
+cd vv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 550, nSim = 600/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 600, nSim = 650/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 650, nSim = 700/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 700, nSim = 750/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 750, nSim = 800/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 800, nSim = 850/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 850, nSim = 900/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvvvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 900, nSim = 950/g' constants.f90
+sbatch batch
+cd ..
+
+cd vvvvvvvvvv1
+perl -i.bak -pe 's/lSim = 0, nSim = 50/lSim = 950, nSim = 1000/g' constants.f90
+sbatch batch
+cd ..
+
+
